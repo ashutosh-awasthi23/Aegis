@@ -43,6 +43,7 @@ class SecurityContext(BaseModel):
     model_config = {"frozen": True}  # Immutable: no module can tamper with user permissions mid-flight
 
 
+
 # Async-safe thread-local storage for the active request context
 _current_context: ContextVar[Optional[SecurityContext]] = ContextVar("security_context", default=None)
 
